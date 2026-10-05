@@ -225,12 +225,19 @@
             z-index: 1000;
         }
 
+        /* Tela inicial: conteúdo ancorado logo abaixo da logo (espaço reduzido em 50%) */
+        #form-container.welcome {
+            align-items: flex-start;
+            padding-top: calc(215px - 10vh);
+        }
+
         @media (max-width: 768px) {
             .question-text { font-size: 20px; }
             .form-input { font-size: 20px; }
             .option-text { font-size: 16px; }
             #form-container { padding: 20px; }
             #main-logo { height: 56px; top: 20px; }
+            #form-container.welcome { padding-top: calc(115px - 10vh); }
         }
     </style>
 </head>
@@ -460,6 +467,7 @@
         }
 
         function showStep(step) {
+            document.getElementById('form-container').classList.toggle('welcome', step === 0);
             document.querySelectorAll('.question-step').forEach(el => {
                 const s = parseInt(el.dataset.step);
                 if (s === step) {

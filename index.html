@@ -244,7 +244,6 @@
 <body>
     <div id="progress-bar"></div>
 
-    <img id="main-logo" src="./logo.png" alt="Le Dominus">
 
     <div id="form-container">
         <!-- Tela Inicial (0) -->
@@ -467,7 +466,6 @@
         }
 
         function showStep(step) {
-            document.getElementById('form-container').classList.toggle('welcome', step === 0);
             document.querySelectorAll('.question-step').forEach(el => {
                 const s = parseInt(el.dataset.step);
                 if (s === step) {

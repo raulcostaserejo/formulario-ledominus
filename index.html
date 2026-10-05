@@ -329,7 +329,7 @@
                 <div class="option-wrapper"><label class="option-card"><div class="option-letter">D</div><input type="checkbox" name="q5" value="Pintura comercial"><span class="option-text">Pintura comercial</span></label></div>
                 <div class="option-wrapper"><label class="option-card"><div class="option-letter">E</div><input type="checkbox" name="q5" value="Construção"><span class="option-text">Construção</span></label></div>
                 <div class="option-wrapper">
-                    <label class="option-card"><div class="option-letter">F</div><input type="checkbox" name="q5" value="Outros" class="has-other"><span class="option-text">Outros</span></label>
+                    <label class="option-card"><div class="option-letter">F</div><input type="checkbox" name="q5" value="Outro" class="has-other"><span class="option-text">Outro</span></label>
                     <div class="other-input-container" style="display: none;">
                         <input type="text" class="other-input" placeholder="Quais?">
                     </div>
@@ -346,8 +346,8 @@
             </div>
             <div class="options-container">
                 <div class="option-wrapper"><label class="option-card"><div class="option-letter">A</div><input type="radio" name="q6" value="Sim, é um dos principais serviços"><span class="option-text">Sim, é um dos principais serviços</span></label></div>
-                <div class="option-wrapper"><label class="option-card"><div class="option-letter">B</div><input type="radio" name="q6" value="Sim, mas representa uma parte menor do negócio"><span class="option-text">Sim, mas representa uma parte menor do negócio</span></label></div>
-                <div class="option-wrapper"><label class="option-card"><div class="option-letter">C</div><input type="radio" name="q6" value="Não"><span class="option-text">Não</span></label></div>
+                <div class="option-wrapper"><label class="option-card"><div class="option-letter">B</div><input type="radio" name="q6" value="Sim, mas é um serviço secundário"><span class="option-text">Sim, mas é um serviço secundário</span></label></div>
+                <div class="option-wrapper"><label class="option-card"><div class="option-letter">C</div><input type="radio" name="q6" value="Não realizamos esse tipo de serviço"><span class="option-text">Não realizamos esse tipo de serviço</span></label></div>
             </div>
         </div>
 
@@ -358,7 +358,7 @@
                 <h2 class="question-text">Atualmente, você investe em marketing para gerar novos clientes?</h2>
             </div>
             <div class="options-container">
-                <div class="option-wrapper"><label class="option-card"><div class="option-letter">A</div><input type="radio" name="q7" value="Não invisto"><span class="option-text">Não invisto</span></label></div>
+                <div class="option-wrapper"><label class="option-card"><div class="option-letter">A</div><input type="radio" name="q7" value="Não, apenas indicação/orgânico"><span class="option-text">Não, apenas indicação/orgânico</span></label></div>
                 <div class="option-wrapper"><label class="option-card"><div class="option-letter">B</div><input type="radio" name="q7" value="Até R$ 1.000/mês"><span class="option-text">Até R$ 1.000/mês</span></label></div>
                 <div class="option-wrapper"><label class="option-card"><div class="option-letter">C</div><input type="radio" name="q7" value="R$ 1.000 a R$ 3.000/mês"><span class="option-text">R$ 1.000 a R$ 3.000/mês</span></label></div>
                 <div class="option-wrapper"><label class="option-card"><div class="option-letter">D</div><input type="radio" name="q7" value="R$ 3.000 a R$ 5.000/mês"><span class="option-text">R$ 3.000 a R$ 5.000/mês</span></label></div>
@@ -506,13 +506,7 @@
             
             const q5_boxes = document.querySelectorAll('input[name="q5"]:checked');
             q5_boxes.forEach(box => {
-                if(box.classList.contains('has-other')) {
-                    const otherVal = box.closest('.option-wrapper').querySelector('.other-input').value;
-                    formBody.append('entry.1217802370', '__other_option__');
-                    formBody.append('entry.1217802370.other_option_response', otherVal || 'Outro');
-                } else {
-                    formBody.append('entry.1217802370', box.value);
-                }
+                formBody.append('entry.1217802370', box.value);
             });
             
             const q6 = document.querySelector('input[name="q6"]:checked');
@@ -522,15 +516,7 @@
             if(q7) formBody.append('entry.2011873264', q7.value);
             
             const q8 = document.querySelector('input[name="q8"]:checked');
-            if(q8) {
-                if(q8.classList.contains('has-other')) {
-                    const otherVal = q8.closest('.option-wrapper').querySelector('.other-input').value;
-                    formBody.append('entry.512734867', '__other_option__');
-                    formBody.append('entry.512734867.other_option_response', otherVal || 'Outro');
-                } else {
-                    formBody.append('entry.512734867', q8.value);
-                }
-            }
+            if(q8) formBody.append('entry.512734867', q8.value);
             
             const q9 = document.querySelector('input[name="q9"]:checked');
             if(q9) formBody.append('entry.1302515072', q9.value);

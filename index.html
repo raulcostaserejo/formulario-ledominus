@@ -541,16 +541,46 @@
             const q11 = document.querySelector('input[name="q11"]:checked');
             if(q11) formBody.append('entry.282945786', q11.value);
             
+            let redirected = false;
+            function redirectToConfirmation() {
+                if (redirected) return;
+                redirected = true;
+                const redirectUrl = 'https://www.ledominus.com.br/cadastro-confirmado';
+                try {
+                    if (window.top && window.top !== window) {
+                        window.top.location.href = redirectUrl;
+                    } else {
+                        window.location.href = redirectUrl;
+                    }
+                } catch (e) {
+                    window.location.href = redirectUrl;
+                }
+            }
+
+            // Visual feedback
+            const container = document.getElementById('form-container');
+            if (container) {
+                container.style.opacity = '0.5';
+                container.style.pointerEvents = 'none';
+            }
+
             fetch(url, {
                 method: 'POST',
                 mode: 'no-cors',
+                keepalive: true,
                 headers: {
                     'Content-Type': 'application/x-www-form-urlencoded'
                 },
                 body: formBody.toString()
             }).then(() => {
-                console.log('Enviado com sucesso');
-            }).catch(e => console.error(e));
+                redirectToConfirmation();
+            }).catch(e => {
+                console.error(e);
+                redirectToConfirmation();
+            });
+
+            // Garantia de redirecionamento caso o fetch demore
+            setTimeout(redirectToConfirmation, 800);
         }
 
         function nextStep() {
@@ -564,6 +594,7 @@
 
             if (currentStep === 11) {
                 submitToGoogleForms();
+                return;
             }
 
             if (currentStep <= totalSteps) {

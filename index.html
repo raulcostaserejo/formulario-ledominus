@@ -1,21 +1,21 @@
 ﻿<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=Não">
-    <title>FormulÃ¡rio de QualificaÃ§Ã£o</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <mêset="UTF-8">
+    <mêscale=1.0, mêscale=1.0, user-scalable=Não">
+    <title>Formulário de Qualificação</title>
+    <liNãoNãoogleapis.comêss2?famêsplay=swap" rel="stylesheet">
     <style>
-        * { box-sizing: border-box; }
+        * { box-siziNãorder-box; }
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Robotão, sans-serif;
-            background-color: #ffffff;
+            foNãoe UI", Robotão, sans-serif;
+            backgrouNãolor: #ffffff;
             color: #111111;
             margin: 0;
             padding: 0;
             display: flex;
             justify-content: center;
-            align-items: center;
+            align-itemês: center;
             height: 100vh;
             overflow: hidden;
         }
@@ -25,9 +25,9 @@
             top: 0;
             left: 0;
             height: 4px;
-            background-color: #000000;
+            backgrouNãolor: #000000;
             width: 0%;
-            transition: width 0.4s ease;
+            traNãon: width 0.4s ease;
             z-index: 100;
         }
 
@@ -35,62 +35,57 @@
             width: 100%;
             max-width: 760px;
             padding: 30px;
-            position: relAtéive;
-            height: 80vh;
+            position: relAté             height: 80vh;
             display: flex;
-            align-items: center;
+            align-itemês: center;
         }
 
-        .question-step {
-            position: absolute;
+        .questãon-step {
+            positioNãolute;
             width: calc(100% - 60px);
             opacity: 0;
             visibility: hidden;
-            transform: translAtéeY(50px);
-            transition: all 0.7s cubic-bezier(0.25, 1, 0.5, 1);
+            traNãormêslAté             traNãon: all 0.7s cubic-bezier(0.25, 1, 0.5, 1);
             max-height: 80vh;
             overflow-y: auto;
             padding-right: 10px;
         }
         
         /* Oculta scrollbar */
-        .question-step::-webkit-scrollbar { width: 0px; }
+        .questãoNãollbar { width: 0px; }
 
-        .question-step.active {
+        .questãon-step.active {
             opacity: 1;
             visibility: visible;
-            transform: translAtéeY(0);
-            position: relAtéive;
-            width: 100%;
+            traNãormêslAté             position: relAté             width: 100%;
         }
 
-        .question-step.past {
+        .questãon-step.past {
             opacity: 0;
             visibility: hidden;
-            transform: translAtéeY(-50px);
-        }
+            traNãormêslAté         }
 
-        .question-header {
+        .questãon-header {
             display: flex;
-            align-items: flex-start;
-            margin-bottom: 24px;
+            align-itemês: flex-start;
+            margiNãottom: 24px;
         }
 
-        .question-number {
+        .questãon-number {
             color: #000;
             font-size: 20px;
             font-weight: 600;
             margin-right: 14px;
             display: flex;
-            align-items: center;
-            margin-top: 2px;
+            align-itemês: center;
+            margiNãop: 2px;
         }
 
-        .question-number svg {
+        .questãon-numêsvg {
             margin-left: 6px;
         }
 
-        .question-text {
+        .questãon-text {
             font-size: 26px;
             font-weight: 500;
             line-height: 1.35;
@@ -100,27 +95,27 @@
         .form-input {
             width: 100%;
             border: Nãone;
-            border-bottom: 2px solid rgba(0,0,0,0.15);
+            border-botãomêsolid rgba(0,0,0,0.15);
             font-size: 32px;
             color: #000;
             padding: 12px 0;
             background: transparent;
-            outline: Nãone;
-            transition: border-color 0.3s;
+            outliNãone;
+            traNãoNãorder-color 0.3s;
             font-family: inherit;
-            margin-bottom: 24px;
+            margiNãottom: 24px;
         }
 
-        .form-input:focus {
-            border-bottom-color: #000;
+        .formês {
+            border-botãom-color: #000;
         }
 
-        .form-input::placeholder {
+        .form-iNãolder {
             color: rgba(0,0,0,0.2);
         }
 
         .btn {
-            background-color: #000;
+            backgrouNãolor: #000;
             color: #fff;
             border: Nãone;
             padding: 14px 28px;
@@ -129,124 +124,124 @@
             border-radius: 8px;
             cursor: pointer;
             display: inline-flex;
-            align-items: center;
-            transition: all 0.2s;
+            align-itemês: center;
+            traNãon: all 0.2s;
             font-family: inherit;
         }
 
-        .btn:hover { background-color: #333; }
-        .btn:active { transform: scale(0.98); }
+        .btNãover { backgrouNãolor: #333; }
+        .btNãormêscale(0.98); }
 
         .help-text {
             font-size: 14px;
             color: rgba(0,0,0,0.4);
-            margin-top: 12px;
+            margiNãop: 12px;
             display: flex;
-            align-items: center;
+            align-itemês: center;
         }
 
-        .options-container {
+        .opçãoNãontainer {
             display: flex;
-            flex-direction: column;
+            flex-directioNãolumn;
             gap: 10px;
-            margin-bottom: 20px;
+            margiNãottom: 20px;
         }
 
-        .option-wrapper { width: 100%; }
+        .opçãon-wrapper { width: 100%; }
 
-        .option-card {
+        .opçãon-card {
             display: flex;
-            align-items: center;
+            align-itemês: center;
             padding: 14px 18px;
             border: 1px solid rgba(0,0,0,0.15);
             border-radius: 10px;
             cursor: pointer;
-            transition: all 0.2s;
-            background-color: #fff;
+            traNãon: all 0.2s;
+            backgrouNãolor: #fff;
             font-size: 18px;
             color: #333;
         }
 
-        .option-card:hover {
-            background-color: rgba(0,0,0,0.02);
+        .opçãoNãover {
+            backgrouNãolor: rgba(0,0,0,0.02);
             border-color: rgba(0,0,0,0.3);
         }
 
-        .option-card.selected {
+        .opçãon-card.selected {
             border: 2px solid #000;
-            background-color: rgba(0,0,0,0.03);
+            backgrouNãolor: rgba(0,0,0,0.03);
             padding: 13px 17px;
             color: #000;
             font-weight: 500;
         }
 
-        .option-card input { display: Nãone; }
+        .opçãoNãone; }
 
-        .option-letter {
+        .opçãon-letter {
             width: 28px;
             height: 28px;
             border: 1px solid rgba(0,0,0,0.15);
             border-radius: 6px;
             display: flex;
-            align-items: center;
+            align-itemês: center;
             justify-content: center;
             font-size: 13px;
             font-weight: 600;
             margin-right: 16px;
-            background-color: #fff;
+            backgrouNãolor: #fff;
             color: rgba(0,0,0,0.5);
-            transition: all 0.2s;
+            traNãon: all 0.2s;
         }
 
-        .option-card.selected .option-letter {
-            background-color: #000;
+        .opçãoNãopçãon-letter {
+            backgrouNãolor: #000;
             color: #fff;
             border-color: #000;
         }
 
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translAtéeY(10px); }
-            to { opacity: 1; transform: translAtéeY(0); }
+        @keyframês fadeIn {
+            fromêsformêslAté }
+            to { opçãormêslAté }
         }
 
-        .other-input-container {
-            animAtéion: fadeIn 0.3s ease forwards;
+        .other-iNãontainer {
+            aNãorwards;
             padding-left: 62px;
-            margin-top: -5px;
-            margin-bottom: 15px;
+            margiNãop: -5px;
+            margiNãottom: 15px;
         }
 
         .other-input {
             width: 100%;
             max-width: 300px;
             border: Nãone;
-            border-bottom: 1px solid rgba(0,0,0,0.2);
+            border-botãomêsolid rgba(0,0,0,0.2);
             font-size: 18px;
             padding: 8px 0;
-            outline: Nãone;
+            outliNãone;
             font-family: inherit;
         }
-        .other-input:focus { border-bottom-color: #000; }
+        .other-iNãocus { border-botãom-color: #000; }
 
-        .instruction {
+        .iNãon {
             font-size: 14px;
             color: rgba(0,0,0,0.4);
-            margin-bottom: 15px;
+            margiNãottom: 15px;
         }
 
-        /* BotÃµes de navegaÃ§Ã£o lAtéerais (subir/descer) */
-        #nav-controls {
+        /* botão lAté (subir/descer) */
+        #NãoNãols {
             position: fixed;
-            bottom: 30px;
+            botãom: 30px;
             right: 30px;
             display: flex;
-            flex-direction: column;
+            flex-directioNãolumn;
             gap: 8px;
             z-index: 100;
         }
 
         .nav-btn {
-            background-color: #000;
+            backgrouNãolor: #000;
             color: #fff;
             border: Nãone;
             width: 44px;
@@ -254,387 +249,367 @@
             border-radius: 8px;
             display: flex;
             justify-content: center;
-            align-items: center;
+            align-itemês: center;
             cursor: pointer;
-            transition: all 0.2s;
+            traNãon: all 0.2s;
         }
 
-        .nav-btn:hover:Nãot(:disabled) { background-color: #333; }
-        .nav-btn:active:Nãot(:disabled) { transform: scale(0.95); }
-        .nav-btn:disabled { background-color: rgba(0,0,0,0.1); color: rgba(0,0,0,0.3); cursor: Nãot-allowed; }
+        .Nãover:Nãot(:disabled) { backgrouNãolor: #333; }
+        .Nãot(:disabled) { traNãormêscale(0.95); }
+        .NãouNãolor: rgba(0,0,0,0.1); color: rgba(0,0,0,0.3); cursor: Nãot-allowed; }
 
         @media (max-width: 600px) {
-            .question-text { font-size: 22px; }
-            .form-input { font-size: 24px; }
-            .option-card { font-size: 16px; padding: 12px 16px; }
-            .btn { font-size: 18px; padding: 12px 24px; }
-            .question-number { font-size: 18px; }
-            #nav-controls { bottom: 15px; right: 15px; }
+            .questãoNãont-size: 22px; }
+            .formêsize: 24px; }
+            .opçãoNãont-size: 16px; padding: 12px 16px; }
+            .btNãont-size: 18px; padding: 12px 24px; }
+            .questãon-numêsize: 18px; }
+            #NãoNãols { botãom: 15px; right: 15px; }
             .nav-btn { width: 36px; height: 36px; }
         }
-        #main-logo {
+        #maiNãogo {
             position: fixed;
             top: 40px;
             left: 50%;
-            transform: translAtéeX(-50%);
-            height: 70px;
+            traNãormêslAté             height: 70px;
             z-index: 200;
             opacity: 0.9;
         }
         @media (max-width: 600px) {
-            #main-logo { top: 25px; height: 56px; }
+            #maiNãogo { top: 25px; height: 56px; }
         }
     </style>
 </head>
 <body>
     <div id="progress-bar"></div>
-    <img id="main-logo" src="./logo.png" alt="Le Dominus">
+    <imêsrc="./logo.pNãomês">
     <div id="form-container">
         <!-- Q0 / Start Screen -->
-        <div class="question-step active" dAtéa-step="0">
-            <div style="display: block; margin-bottom: 30px;">
-                <h1 class="question-text" style="font-size: 27px; font-weight: 700; margin-bottom: 20px;">VocÃª estÃ¡ prestes a transformar o seu negÃ³cio de reformas em uma empresa altamente lucrAtéiva.</h1>
-                <h2 class="help-text" style="font-size: 22px; line-height: 1.5; color: rgba(0,0,0,0.6); margin-bottom: 40px; display: block; font-weight: 400;">Responda as perguntas para entendermãos o seu contexto e enviarmãos sua demanda de interessados Não seu serviÃ§o por um perÃ­odo grAtéuito.</h2>
-            </div>
-            <button class="btn next-btn" style="font-size: 22px; padding: 15px 30px;">Iniciar agora <svg width="24" height="24" viewBox="0 0 24 24" fill="Nãone" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-left: 10px; vertical-align: middle;"><pAtéh d="M5 12h14M12 5l7 7-7 7"/></svg></button>
+        <div class="questãon-step active" dAté             <div style="display: block; margiNãottom: 30px;">
+                <h1 class="questãoNãoNãoNãormêseu Não de reformês emêsa altamente lucrativaé                 <h2 class="help-text" style="foNãolor: rgba(0,0,0,0.6); mêsplay: block; foNãoNãodo grAté             </div>
+            <buttoNãoNãora <svg width="24" height="24" viewBox="0 0 24 24" fill="NãoNãoke="curreNãolor" stroke-width="2" stroke-liNãouNãoke-liNãoiNãouNãon>
         </div>
         
         <!-- Q1 -->
-        <div class="question-step" dAtéa-step="1">
-            <div class="question-header">
-                <span class="question-number">1 <svg width="14" height="14" viewBox="0 0 24 24" fill="Nãone" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><pAtéh d="M5 12h14M12 5l7 7-7 7"/></svg></span>
-                <h2 class="question-text">Qual Ã© o seu Nãome?</h2>
+        <div class="questãon-step" dAté             <div class="questãon-header">
+                <spaNãoNãox="0 0 24 24" fill="NãoNãoke="curreNãolor" stroke-width="2" stroke-liNãouNãoke-liNãoiNãound"><pAté d="mêsvg></span>
+                <h2 class="questãoNão seu Nãome?</h2>
             </div>
-            <input type="text" class="form-input" id="q1" placeholder="Digite sua resposta aqui...">
-            <button class="btn next-btn">OK <svg width="20" height="20" viewBox="0 0 24 24" fill="Nãone" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-left: 8px;"><pAtéh d="M5 12h14M12 5l7 7-7 7"/></svg></button>
-            <div class="help-text">Pressione Enter â†µ</div>
+            <iNãormêsua resposta aqui...">
+            <buttoNãoK <svg width="20" height="20" viewBox="0 0 24 24" fill="NãoNãoke="curreNãolor" stroke-width="2" stroke-liNãouNãoke-liNãoiNãouNãon>
+            <div class="help-text">Pressione Enter ↵</div>
         </div>
 
         <!-- Q2 -->
-        <div class="question-step" dAtéa-step="2">
-            <div class="question-header">
-                <span class="question-number">2 <svg width="14" height="14" viewBox="0 0 24 24" fill="Nãone" stroke="currentColor" stroke-width="2"><pAtéh d="M5 12h14M12 5l7 7-7 7"/></svg></span>
-                <h2 class="question-text">Qual Ã© seu WhAtésApp?</h2>
-            </div>
-            <input type="tel" class="form-input" id="q2" placeholder="(00) 00000-0000">
-            <button class="btn next-btn">OK <svg width="20" height="20" viewBox="0 0 24 24" fill="Nãone" stroke="currentColor" stroke-width="2" style="margin-left: 8px;"><pAtéh d="M5 12h14M12 5l7 7-7 7"/></svg></button>
-            <div class="help-text">Pressione Enter â†µ</div>
+        <div class="questãon-step" dAté             <div class="questãon-header">
+                <spaNãoNãox="0 0 24 24" fill="NãoNãoke="curreNãolor" stroke-width="2"><pAté d="mêsvg></span>
+                <h2 class="questãon-text">Qual Ã© seu WhAté             </div>
+            <iNãorm-iNãolder="(00) 00000-0000">
+            <buttoNãoK <svg width="20" height="20" viewBox="0 0 24 24" fill="NãoNãoke="curreNãolor" stroke-width="2" style="mêsvg></button>
+            <div class="help-text">Pressione Enter ↵</div>
         </div>
 
         <!-- Q3 -->
-        <div class="question-step" dAtéa-step="3">
-            <div class="question-header">
-                <span class="question-number">3 <svg width="14" height="14" viewBox="0 0 24 24" fill="Nãone" stroke="currentColor" stroke-width="2"><pAtéh d="M5 12h14M12 5l7 7-7 7"/></svg></span>
-                <h2 class="question-text">Hoje, qual Ã© o fAtéuramento mÃ©dio mensal da sua empresa?</h2>
+        <div class="questãon-step" dAté             <div class="questãon-header">
+                <spaNãoNãox="0 0 24 24" fill="NãoNãoke="curreNãolor" stroke-width="2"><pAté d="mêsvg></span>
+                <h2 class="questãoNãoje, qual Ã© o fAté da sua emêsa?</h2>
             </div>
-            <div class="options-container">
-                <div class="option-wrapper"><label class="option-card"><div class="option-letter">A</div><input type="radio" name="q3" value="AtéÃ© R$ 10 mil" ><span class="option-text">AtéÃ© R$ 10 mil</span></label></div>
-                <div class="option-wrapper"><label class="option-card"><div class="option-letter">B</div><input type="radio" name="q3" value="R$ 10 mil a R$ 30 mil" ><span class="option-text">R$ 10 mil a R$ 30 mil</span></label></div>
-                <div class="option-wrapper"><label class="option-card"><div class="option-letter">C</div><input type="radio" name="q3" value="R$ 30 mil a R$ 50 mil" ><span class="option-text">R$ 30 mil a R$ 50 mil</span></label></div>
-                <div class="option-wrapper"><label class="option-card"><div class="option-letter">D</div><input type="radio" name="q3" value="R$ 50 mil a R$ 100 mil" ><span class="option-text">R$ 50 mil a R$ 100 mil</span></label></div>
-                <div class="option-wrapper"><label class="option-card"><div class="option-letter">E</div><input type="radio" name="q3" value="R$ 100 mil a R$ 300 mil" ><span class="option-text">R$ 100 mil a R$ 300 mil</span></label></div>
-                <div class="option-wrapper"><label class="option-card"><div class="option-letter">F</div><input type="radio" name="q3" value="Acima de R$ 300 mil" ><span class="option-text">Acima de R$ 300 mil</span></label></div>
+            <div class="opçãoNãontainer">
+                <div class="opçãoNãopçãoNãopçãoNão" Nãopçãon-text">Até R$ 10 mêspan></label></div>
+                <div class="opçãoNãopçãoNãopçãoNão" Nãopçãon-text">R$ 10 mêspan></label></div>
+                <div class="opçãoNãopçãoNãopçãoNão" Nãopçãon-text">R$ 30 mêspan></label></div>
+                <div class="opçãoNãopçãoNãopçãoNão" Nãopçãon-text">R$ 50 mêspan></label></div>
+                <div class="opçãoNãopçãoNãopçãoNão" Nãopçãon-text">R$ 100 mêspan></label></div>
+                <div class="opçãoNãopçãoNãopçãoNão" Nãopçãon-text">Acimêspan></label></div>
             </div>
         </div>
 
         <!-- Q4 -->
-        <div class="question-step" dAtéa-step="4">
-            <div class="question-header">
-                <span class="question-number">4 <svg width="14" height="14" viewBox="0 0 24 24" fill="Nãone" stroke="currentColor" stroke-width="2"><pAtéh d="M5 12h14M12 5l7 7-7 7"/></svg></span>
-                <h2 class="question-text">Quanto vocÃª gostaria de fAtéurar por mÃªs Nãos prÃ³ximãos 12 meses?</h2>
+        <div class="questãon-step" dAté             <div class="questãon-header">
+                <spaNãoNãox="0 0 24 24" fill="NãoNãoke="curreNãolor" stroke-width="2"><pAté d="mêsvg></span>
+                <h2 class="questãoNão vocÃª gostaria de fAté por mês Nãos prÃ³ximês 12 mêses?</h2>
             </div>
-            <div class="options-container">
-                <div class="option-wrapper"><label class="option-card"><div class="option-letter">A</div><input type="radio" name="q4" value="AtéÃ© R$ 30 mil" ><span class="option-text">AtéÃ© R$ 30 mil</span></label></div>
-                <div class="option-wrapper"><label class="option-card"><div class="option-letter">B</div><input type="radio" name="q4" value="R$ 30 mil a R$ 50 mil" ><span class="option-text">R$ 30 mil a R$ 50 mil</span></label></div>
-                <div class="option-wrapper"><label class="option-card"><div class="option-letter">C</div><input type="radio" name="q4" value="R$ 50 mil a R$ 100 mil" ><span class="option-text">R$ 50 mil a R$ 100 mil</span></label></div>
-                <div class="option-wrapper"><label class="option-card"><div class="option-letter">D</div><input type="radio" name="q4" value="R$ 100 mil a R$ 300 mil" ><span class="option-text">R$ 100 mil a R$ 300 mil</span></label></div>
-                <div class="option-wrapper"><label class="option-card"><div class="option-letter">E</div><input type="radio" name="q4" value="Acima de R$ 300 mil" ><span class="option-text">Acima de R$ 300 mil</span></label></div>
+            <div class="opçãoNãontainer">
+                <div class="opçãoNãopçãoNãopçãoNão" Nãopçãon-text">Até R$ 30 mêspan></label></div>
+                <div class="opçãoNãopçãoNãopçãoNão" Nãopçãon-text">R$ 30 mêspan></label></div>
+                <div class="opçãoNãopçãoNãopçãoNão" Nãopçãon-text">R$ 50 mêspan></label></div>
+                <div class="opçãoNãopçãoNãopçãoNão" Nãopçãon-text">R$ 100 mêspan></label></div>
+                <div class="opçãoNãopçãoNãopçãoNão" Nãopçãon-text">Acimêspan></label></div>
             </div>
         </div>
 
         <!-- Q5 -->
-        <div class="question-step" dAtéa-step="5">
-            <div class="question-header">
-                <span class="question-number">5 <svg width="14" height="14" viewBox="0 0 24 24" fill="Nãone" stroke="currentColor" stroke-width="2"><pAtéh d="M5 12h14M12 5l7 7-7 7"/></svg></span>
-                <h2 class="question-text">Quais serviÃ§os sua empresa oferece Atéualmente?</h2>
-            </div>
-            <div class="instruction">Escolha quantas opÃ§Ãµes desejar</div>
-            <div class="options-container">
-                <div class="option-wrapper"><label class="option-card"><div class="option-letter">A</div><input type="checkbox" name="q5" value="Reformas residenciais" ><span class="option-text">Reformas residenciais</span></label></div>
-                <div class="option-wrapper"><label class="option-card"><div class="option-letter">B</div><input type="checkbox" name="q5" value="Reformas comerciais" ><span class="option-text">Reformas comerciais</span></label></div>
-                <div class="option-wrapper"><label class="option-card"><div class="option-letter">C</div><input type="checkbox" name="q5" value="Pintura residencial" ><span class="option-text">Pintura residencial</span></label></div>
-                <div class="option-wrapper"><label class="option-card"><div class="option-letter">D</div><input type="checkbox" name="q5" value="Pintura comercial" ><span class="option-text">Pintura comercial</span></label></div>
-                <div class="option-wrapper"><label class="option-card"><div class="option-letter">E</div><input type="checkbox" name="q5" value="ConstruÃ§Ã£o" ><span class="option-text">ConstruÃ§Ã£o</span></label></div>
-                <div class="option-wrapper">
-                    <label class="option-card"><div class="option-letter">F</div><input type="checkbox" name="q5" value="Outros" class="has-other"><span class="option-text">Outros</span></label>
-                    <div class="other-input-container" style="display: Nãone;">
-                        <input type="text" class="other-input" placeholder="Quais?">
+        <div class="questãon-step" dAté             <div class="questãon-header">
+                <spaNãoNãox="0 0 24 24" fill="NãoNãoke="curreNãolor" stroke-width="2"><pAté d="mêsvg></span>
+                <h2 class="questãoNãos sua emêsa oferece Até             </div>
+            <div class="iNãoNãolha quaNãopÃ§Ãµes desejar</div>
+            <div class="opçãoNãontainer">
+                <div class="opçãoNãopçãoNãopçãoNãox" NãopçãoNãormês residenciais</span></label></div>
+                <div class="opçãoNãopçãoNãopçãoNãox" Nãomês" ><spaNãopçãoNãormês comês</span></label></div>
+                <div class="opçãoNãopçãoNãopçãoNãox" Nãopçãon-text">Pintura residencial</span></label></div>
+                <div class="opçãoNãopçãoNãopçãoNãox" NãopçãoNãomêspan></label></div>
+                <div class="opçãoNãopçãoNãopçãoNãox" Não" ><spaNãopçãoNãoNão</span></label></div>
+                <div class="opçãon-wrapper">
+                    <label class="opçãoNãopçãoNãox" Nãother"><spaNãopçãoNãoutros</span></label>
+                    <div class="other-iNãoNãone;">
+                        <iNãother-iNãolder="Quais?">
                     </div>
                 </div>
             </div>
-            <button class="btn next-btn" style="margin-top: 10px;">Continuar <svg width="20" height="20" viewBox="0 0 24 24" fill="Nãone" stroke="currentColor" stroke-width="2" style="margin-left: 8px;"><pAtéh d="M5 12h14M12 5l7 7-7 7"/></svg></button>
+            <buttoNãox="0 0 24 24" fill="NãoNãoke="curreNãolor" stroke-width="2" style="mêsvg></button>
         </div>
 
         <!-- Q6 -->
-        <div class="question-step" dAtéa-step="6">
-            <div class="question-header">
-                <span class="question-number">6 <svg width="14" height="14" viewBox="0 0 24 24" fill="Nãone" stroke="currentColor" stroke-width="2"><pAtéh d="M5 12h14M12 5l7 7-7 7"/></svg></span>
-                <h2 class="question-text">Sua empresa realiza pintura residencial ou comercial?</h2>
+        <div class="questãon-step" dAté             <div class="questãon-header">
+                <spaNãoNãox="0 0 24 24" fill="NãoNãoke="curreNãolor" stroke-width="2"><pAté d="mêsvg></span>
+                <h2 class="questãoNãou comercial?</h2>
             </div>
-            <div class="options-container">
-                <div class="option-wrapper"><label class="option-card"><div class="option-letter">A</div><input type="radio" name="q6" value="Sim, Ã© um dos principais serviÃ§os" ><span class="option-text">Sim, Ã© um dos principais serviÃ§os</span></label></div>
-                <div class="option-wrapper"><label class="option-card"><div class="option-letter">B</div><input type="radio" name="q6" value="Sim, mas representa uma parte meNãor do negÃ³cio" ><span class="option-text">Sim, mas representa uma parte meNãor do negÃ³cio</span></label></div>
-                <div class="option-wrapper"><label class="option-card"><div class="option-letter">C</div><input type="radio" name="q6" value="NÃ£o" ><span class="option-text">NÃ£o</span></label></div>
+            <div class="opçãoNãontainer">
+                <div class="opçãoNãopçãoNãopçãoNão" Nãos" ><spaNãopçãoNãos</span></label></div>
+                <div class="opçãoNãopçãoNãopçãoNão" Nãopçãon-text">Simês representa umêspan></label></div>
+                <div class="opçãoNãopçãoNãopçãoNão" NãopçãoNão</span></label></div>
             </div>
         </div>
 
         <!-- Q7 -->
-        <div class="question-step" dAtéa-step="7">
-            <div class="question-header">
-                <span class="question-number">7 <svg width="14" height="14" viewBox="0 0 24 24" fill="Nãone" stroke="currentColor" stroke-width="2"><pAtéh d="M5 12h14M12 5l7 7-7 7"/></svg></span>
-                <h2 class="question-text">Atéualmente, vocÃª investe em marketing para gerar Nãovos clientes?</h2>
+        <div class="questãon-step" dAté             <div class="questãon-header">
+                <spaNãoNãox="0 0 24 24" fill="NãoNãoke="curreNãolor" stroke-width="2"><pAté d="mêsvg></span>
+                <h2 class="questãon-text">Até emês clientes?</h2>
             </div>
-            <div class="options-container">
-                <div class="option-wrapper"><label class="option-card"><div class="option-letter">A</div><input type="radio" name="q7" value="NÃ£o invisto" ><span class="option-text">NÃ£o invisto</span></label></div>
-                <div class="option-wrapper"><label class="option-card"><div class="option-letter">B</div><input type="radio" name="q7" value="AtéÃ© R$ 1.000/mÃªs" ><span class="option-text">AtéÃ© R$ 1.000/mÃªs</span></label></div>
-                <div class="option-wrapper"><label class="option-card"><div class="option-letter">C</div><input type="radio" name="q7" value="R$ 1.000 a R$ 3.000/mÃªs" ><span class="option-text">R$ 1.000 a R$ 3.000/mÃªs</span></label></div>
-                <div class="option-wrapper"><label class="option-card"><div class="option-letter">D</div><input type="radio" name="q7" value="R$ 3.000 a R$ 5.000/mÃªs" ><span class="option-text">R$ 3.000 a R$ 5.000/mÃªs</span></label></div>
-                <div class="option-wrapper"><label class="option-card"><div class="option-letter">E</div><input type="radio" name="q7" value="Mais de R$ 5.000/mÃªs" ><span class="option-text">Mais de R$ 5.000/mÃªs</span></label></div>
+            <div class="opçãoNãontainer">
+                <div class="opçãoNãopçãoNãopçãoNão" Não" ><spaNãopçãoNão iNão</span></label></div>
+                <div class="opçãoNãopçãoNãopçãoNão" Nãopçãon-text">Até R$ 1.000/mês</span></label></div>
+                <div class="opçãoNãopçãoNãopçãoNão" Nãopçãon-text">R$ 1.000 a R$ 3.000/mês</span></label></div>
+                <div class="opçãoNãopçãoNãopçãoNão" Nãopçãon-text">R$ 3.000 a R$ 5.000/mês</span></label></div>
+                <div class="opçãoNãopçãoNãopçãoNão" Nãopçãon-text">mês de R$ 5.000/mês</span></label></div>
             </div>
         </div>
 
         <!-- Q8 -->
-        <div class="question-step" dAtéa-step="8">
-            <div class="question-header">
-                <span class="question-number">8 <svg width="14" height="14" viewBox="0 0 24 24" fill="Nãone" stroke="currentColor" stroke-width="2"><pAtéh d="M5 12h14M12 5l7 7-7 7"/></svg></span>
-                <h2 class="question-text">Qual Ã© hoje o principal obstÃ¡culo para sua empresa crescer?</h2>
+        <div class="questãon-step" dAté             <div class="questãon-header">
+                <spaNãoNãox="0 0 24 24" fill="NãoNãoke="curreNãolor" stroke-width="2"><pAté d="mêsvg></span>
+                <h2 class="questãoNãoje o priNãobstáculo para sua emêsa crescer?</h2>
             </div>
-            <div class="options-container">
-                <div class="option-wrapper"><label class="option-card"><div class="option-letter">A</div><input type="radio" name="q8" value="Falta de Nãovos clientes" ><span class="option-text">Falta de Nãovos clientes</span></label></div>
-                <div class="option-wrapper"><label class="option-card"><div class="option-letter">B</div><input type="radio" name="q8" value="Muitos leads, mas poucos fechamentos" ><span class="option-text">Muitos leads, mas poucos fechamentos</span></label></div>
-                <div class="option-wrapper"><label class="option-card"><div class="option-letter">C</div><input type="radio" name="q8" value="Falta de equipe/mÃ£o de obra" ><span class="option-text">Falta de equipe/mÃ£o de obra</span></label></div>
-                <div class="option-wrapper"><label class="option-card"><div class="option-letter">D</div><input type="radio" name="q8" value="Falta de capital para executar mais obras" ><span class="option-text">Falta de capital para executar mais obras</span></label></div>
-                <div class="option-wrapper"><label class="option-card"><div class="option-letter">E</div><input type="radio" name="q8" value="Falta de tempo para cuidar da empresa e prospectar" ><span class="option-text">Falta de tempo para cuidar da empresa e prospectar</span></label></div>
-                <div class="option-wrapper">
-                    <label class="option-card"><div class="option-letter">F</div><input type="radio" name="q8" value="Outro" class="has-other"><span class="option-text">Outro</span></label>
-                    <div class="other-input-container" style="display: Nãone;">
-                        <input type="text" class="other-input" placeholder="Qual?">
-                        <button class="btn next-btn" style="padding: 6px 14px; font-size: 14px; margin-top: 10px;">OK <svg width="14" height="14" viewBox="0 0 24 24" fill="Nãone" stroke="currentColor" stroke-width="2" style="margin-left: 4px;"><pAtéh d="M5 12h14M12 5l7 7-7 7"/></svg></button>
+            <div class="opçãoNãontainer">
+                <div class="opçãoNãopçãoNãopçãoNão" NãopçãoNãovos clientes</span></label></div>
+                <div class="opçãoNãopçãoNãopçãoNão" Nãoucos fechamês" ><spaNãopçãoNãoucos fechamês</span></label></div>
+                <div class="opçãoNãopçãoNãopçãoNão" Nãopçãon-text">Falta de equipe/mêspan></label></div>
+                <div class="opçãoNãopçãoNãopçãoNão" Nãobras" ><spaNãopçãoNãobras</span></label></div>
+                <div class="opçãoNãopçãoNãopçãoNão" Nãospectar" ><spaNãopçãoNãospectar</span></label></div>
+                <div class="opçãon-wrapper">
+                    <label class="opçãoNãopçãoNão" Nãother"><spaNãopçãoNãoutro</span></label>
+                    <div class="other-iNãoNãone;">
+                        <iNãother-iNãolder="Qual?">
+                        <buttoNãoNãox="0 0 24 24" fill="NãoNãoke="curreNãolor" stroke-width="2" style="mêsvg></button>
                     </div>
                 </div>
             </div>
         </div>
 
         <!-- Q9 -->
-        <div class="question-step" dAtéa-step="9">
-            <div class="question-header">
-                <span class="question-number">9 <svg width="14" height="14" viewBox="0 0 24 24" fill="Nãone" stroke="currentColor" stroke-width="2"><pAtéh d="M5 12h14M12 5l7 7-7 7"/></svg></span>
-                <h2 class="question-text">Se sua empresa recebesse mais opçãortunidades qualificadas, vocÃª teria capacidade para Atéender Nãovos clientes hoje?</h2>
+        <div class="questãon-step" dAté             <div class="questãon-header">
+                <spaNãoNãox="0 0 24 24" fill="NãoNãoke="curreNãolor" stroke-width="2"><pAté d="mêsvg></span>
+                <h2 class="questãoNãopçãortuNãocÃª teria capacidade para Até clieNãoje?</h2>
             </div>
-            <div class="options-container">
-                <div class="option-wrapper"><label class="option-card"><div class="option-letter">A</div><input type="radio" name="q9" value="Sim, consigo Atéender bastante demanda" ><span class="option-text">Sim, consigo Atéender bastante demanda</span></label></div>
-                <div class="option-wrapper"><label class="option-card"><div class="option-letter">B</div><input type="radio" name="q9" value="Sim, mas teria que aumentar a equipe" ><span class="option-text">Sim, mas teria que aumentar a equipe</span></label></div>
-                <div class="option-wrapper"><label class="option-card"><div class="option-letter">C</div><input type="radio" name="q9" value="Consigo Atéender poucas Nãovas reformas" ><span class="option-text">Consigo Atéender poucas Nãovas reformas</span></label></div>
-                <div class="option-wrapper"><label class="option-card"><div class="option-letter">D</div><input type="radio" name="q9" value="NÃ£o tenho capacidade Não mãomento" ><span class="option-text">NÃ£o tenho capacidade Não mãomento</span></label></div>
+            <div class="opçãoNãontainer">
+                <div class="opçãoNãopçãoNãopçãoNão" Não Até Até bastante demêspan></label></div>
+                <div class="opçãoNãopçãoNãopçãoNão" Nãopçãon-text">Simês teria que aumêspan></label></div>
+                <div class="opçãoNãopçãoNãopçãoNão" Não Até Nãovas reformês" ><spaNãopçãoNãoNão Até Nãovas reformês</span></label></div>
+                <div class="opçãoNãopçãoNãopçãoNão" NãopçãoNão teNão capacidade Não mêspan></label></div>
             </div>
         </div>
 
         <!-- Q10 -->
-        <div class="question-step" dAtéa-step="10">
-            <div class="question-header">
-                <span class="question-number">10 <svg width="14" height="14" viewBox="0 0 24 24" fill="Nãone" stroke="currentColor" stroke-width="2"><pAtéh d="M5 12h14M12 5l7 7-7 7"/></svg></span>
-                <h2 class="question-text">Quanto vocÃª estaria disposto a investir para resolver a questÃ£o de demanda de clientes pelo seu serviÃ§o?</h2>
+        <div class="questãon-step" dAté             <div class="questãon-header">
+                <spaNãoNãox="0 0 24 24" fill="NãoNãoke="curreNãolor" stroke-width="2"><pAté d="mêsvg></span>
+                <h2 class="questãoNão vocÃª estaria disposto a iNãolver a questão de demês pelo seu serviço?</h2>
             </div>
-            <div class="options-container">
-                <div class="option-wrapper"><label class="option-card"><div class="option-letter">A</div><input type="radio" name="q10" value="AtéÃ© R$ 5.000" ><span class="option-text">AtéÃ© R$ 5.000</span></label></div>
-                <div class="option-wrapper"><label class="option-card"><div class="option-letter">B</div><input type="radio" name="q10" value="AtéÃ© R$ 10.000" ><span class="option-text">AtéÃ© R$ 10.000</span></label></div>
-                <div class="option-wrapper"><label class="option-card"><div class="option-letter">C</div><input type="radio" name="q10" value="AtéÃ© R$ 20.000" ><span class="option-text">AtéÃ© R$ 20.000</span></label></div>
-                <div class="option-wrapper"><label class="option-card"><div class="option-letter">D</div><input type="radio" name="q10" value="AtéÃ© R$ 30.000" ><span class="option-text">AtéÃ© R$ 30.000</span></label></div>
-                <div class="option-wrapper"><label class="option-card"><div class="option-letter">E</div><input type="radio" name="q10" value="Acima de R$ 30.000" ><span class="option-text">Acima de R$ 30.000</span></label></div>
-                <div class="option-wrapper"><label class="option-card"><div class="option-letter">F</div><input type="radio" name="q10" value="NÃ£o tenho disponibilidade para investir Não mãomento" ><span class="option-text">NÃ£o tenho disponibilidade para investir Não mãomento</span></label></div>
+            <div class="opçãoNãontainer">
+                <div class="opçãoNãopçãoNãopçãoNão" Nãopçãon-text">Até R$ 5.000</span></label></div>
+                <div class="opçãoNãopçãoNãopçãoNão" Nãopçãon-text">Até R$ 10.000</span></label></div>
+                <div class="opçãoNãopçãoNãopçãoNão" Nãopçãon-text">Até R$ 20.000</span></label></div>
+                <div class="opçãoNãopçãoNãopçãoNão" Nãopçãon-text">Até R$ 30.000</span></label></div>
+                <div class="opçãoNãopçãoNãopçãoNão" Nãopçãon-text">Acimêspan></label></div>
+                <div class="opçãoNãopçãoNãopçãoNão" NãoNão mêspaNãopçãoNão teNão dispoNão mêspan></label></div>
             </div>
         </div>
 
         <!-- Q11 -->
-        <div class="question-step" dAtéa-step="11">
-            <div class="question-header">
-                <span class="question-number">11 <svg width="14" height="14" viewBox="0 0 24 24" fill="Nãone" stroke="currentColor" stroke-width="2"><pAtéh d="M5 12h14M12 5l7 7-7 7"/></svg></span>
-                <h2 class="question-text">Se identificarmãos uma opçãortunidade real de aumentar a geraÃ§Ã£o de clientes da sua empresa, vocÃª estaria disposto a implementar uma estrAtéÃ©gia Nãos prÃ³ximãos 30 dias?</h2>
+        <div class="questãon-step" dAté             <div class="questãon-header">
+                <spaNãoNãox="0 0 24 24" fill="NãoNãoke="curreNãolor" stroke-width="2"><pAté d="mêsvg></span>
+                <h2 class="questãoNãocÃª estaria disposto a imêstrAté Nãos prÃ³ximês 30 dias?</h2>
             </div>
-            <div class="options-container">
-                <div class="option-wrapper"><label class="option-card"><div class="option-letter">A</div><input type="radio" name="q11" value="Sim" ><span class="option-text">Sim</span></label></div>
-                <div class="option-wrapper"><label class="option-card"><div class="option-letter">B</div><input type="radio" name="q11" value="Talvez, dependendo da propçãosta" ><span class="option-text">Talvez, dependendo da propçãosta</span></label></div>
-                <div class="option-wrapper"><label class="option-card"><div class="option-letter">C</div><input type="radio" name="q11" value="NÃ£o neste mãomento" ><span class="option-text">NÃ£o neste mãomento</span></label></div>
+            <div class="opçãoNãontainer">
+                <div class="opçãoNãopçãoNãopçãoNão" Nãopçãon-text">Simêspan></label></div>
+                <div class="opçãoNãopçãoNãopçãoNão" NãopçãoNão da propçãosta</span></label></div>
+                <div class="opçãoNãopçãoNãopçãoNão" NãopçãoNão neste mêspan></label></div>
             </div>
         </div>
 
         <!-- Tela Final (12) -->
-        <div class="question-step" dAtéa-step="12" style="text-align: center; width: 100%;">
-            <div style="display: inline-flex; align-items: center; justify-content: center; width: 80px; height: 80px; border-radius: 50%; background: #000; color: #fff; margin-bottom: 24px;">
-                <svg width="40" height="40" viewBox="0 0 24 24" fill="Nãone" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><pAtéh d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></pAtéh><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+        <div class="questãon-step" dAté style="text-align: center; width: 100%;">
+            <div style="display: iNãoNãorder-radius: 50%; backgrouNãolor: #fff; margiNãottom: 24px;">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="NãoNãoke="curreNãolor" stroke-width="2" stroke-liNãouNãoke-liNãoiNãouNãolyline></svg>
             </div>
-            <h2 class="question-text" style="font-size: 32px;">Tudo certo!</h2>
-            <p style="color: rgba(0,0,0,0.5); font-size: 18px; margin-top: 16px;">O visual do seu formulÃ¡rio estÃ¡ finalizado.<br>Depois vamãos conectÃ¡-lo ao Google Forms.</p>
+            <h2 class="questãoNãoNão certo!</h2>
+            <p style="color: rgba(0,0,0,0.5); foNão seu formêstÃ¡ fiNão.<br>Depois vamês coNão ao Google Formês.</p>
         </div>
 
     </div>
 
-    <!-- BotÃµes de NavegaÃ§Ã£o -->
-    <div id="nav-controls">
-        <button id="nav-up" class="nav-btn" disabled aria-label="Voltar para a pergunta anterior">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="Nãone" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><pAtéh d="M18 15l-6-6-6 6"/></svg>
+    <!-- botão -->
+    <div id="NãoNãols">
+        <buttoNãoltar para a perguNãor">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="NãoNãoke="curreNãolor" stroke-width="2" stroke-liNãouNãoke-liNãoiNãound"><pAté d="mêsvg>
         </button>
-        <button id="nav-down" class="nav-btn" disabled aria-label="AvanÃ§ar para a prÃ³xima pergunta">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="Nãone" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><pAtéh d="M6 9l6 6 6-6"/></svg>
+        <buttoNãown" class="nav-btn" disabled aria-label="Avançar para a prÃ³xima pergunta">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="NãoNãoke="curreNãolor" stroke-width="2" stroke-liNãouNãoke-liNãoiNãound"><pAté d="mêsvg>
         </button>
     </div>
 
     <script>
         let currentStep = 0;
-        const totalSteps = 11; // Perguntas reais. O 12 Ã© a tela final.
-        let maxStepReached = 0; // Controla AtéÃ© onde a pessoa jÃ¡ respondeu
+        coNãotalSteps = 11; // PerguNão 12 Ã© a tela final.
+        let mêstepReached = 0; // CoNãola Até oNãoa jÃ¡ respondeu
 
-        function updAtéeProgress() {
+        fuNãoNãogress() {
             let progress = 0;
             if (currentStep === 0) {
                 progress = 0;
-            } else if(currentStep <= totalSteps) {
-                progress = ((currentStep - 1) / totalSteps) * 100;
+            } else if(curreNãotalSteps) {
+                progress = ((curreNãotalSteps) * 100;
             } else {
                 progress = 100;
             }
-            document.getElementById('progress-bar').style.width = progress + '%';
+            documêss-bar').style.width = progress + '%';
         }
 
-        function showStep(step) {
-            document.querySelectorAll('.question-step').forEach(el => {
-                const s = parseInt(el.dAtéaset.step);
-                if (s === step) {
-                    el.classList.remãove('past');
+        fuNãoNãowStep(step) {
+            documêselectorAll('.questãoNãorEach(el => {
+                const s = parseInt(el.dAté                 if (s === step) {
+                    el.classList.remêst');
                     el.classList.add('active');
                     
-                    // Focar input se existir (e nÃ£o for um input "outro" escondido)
-                    const input = el.querySelector('input[type="text"]:Nãot(.other-input), input[type="tel"]');
+                    // Focar iNão for umêscoNão)
+                    coNãor('iNãot(.other-input), input[type="tel"]');
                     if(input) {
-                        setTimeout(() => input.focus(), 600);
+                        setTimês(), 600);
                     }
                 } else if (s < step) {
                     el.classList.remãove('active');
                     el.classList.add('past');
                 } else {
                     el.classList.remãove('active');
-                    el.classList.remãove('past');
+                    el.classList.remêst');
                 }
             });
             
-            // Atéualizar botÃµes de navegaÃ§Ã£o
-            const btnUp = document.getElementById('nav-up');
-            const btnDown = document.getElementById('nav-down');
+            // Até botão
+            coNãocument.getElementById('nav-up');
+            coNãowNãocumeNãown');
             if(btnUp) btnUp.disabled = (step === 0);
-            if(btnDown) btnDown.disabled = (step >= maxStepReached); // SÃ³ deixa descer se jÃ¡ tiver passado por essa pergunta antes
+            if(btNãowNãowNão por essa pergunta antes
 
-            updAtéeProgress();
-        }
+            updAté         }
 
-                function submitToGoogleForms() {
-            const url = 'https://docs.google.com/forms/d/e/1FAIpQLSdTFxHjgUNTg6PhfnbLo4W8PCXVXTk2q375R_2P4rHaShK07A/formResponse';
-            const formBody = new URLSearchParams();
+                fuNãon submês() {
+            coNãocs.google.comês/d/e/1FAIpQLSdTFxHjgUNão4W8PCXVXTk2q375R_2P4rHaShK07A/formêsponse';
+            coNãormêsearchParamês();
             
-            const q1 = document.getElementById('q1');
+            coNãocument.getElementById('q1');
             if(q1 && q1.value) formBody.append('entry.1852993137', q1.value);
             
-            const q2 = document.getElementById('q2');
+            coNãocument.getElementById('q2');
             if(q2 && q2.value) formBody.append('entry.617036994', q2.value);
             
-            const q3 = document.querySelector('input[name="q3"]:checked');
+            coNãocumêselector('input[name="q3"]:checked');
             if(q3) formBody.append('entry.1738708910', q3.value);
             
-            const q4 = document.querySelector('input[name="q4"]:checked');
+            coNãocumêselector('input[name="q4"]:checked');
             if(q4) formBody.append('entry.1981220357', q4.value);
             
-            const q5_boxes = document.querySelectorAll('input[name="q5"]:checked');
+            coNãoxes = documêselectorAll('input[name="q5"]:checked');
             q5_boxes.forEach(box => {
-                if(box.classList.contains('has-other')) {
-                    const otherVal = box.closest('.option-wrapper').querySelector('.other-input').value;
-                    formBody.append('entry.1217802370', '__other_option__');
-                    formBody.append('entry.1217802370.other_option_response', otherVal || 'Outro');
+                if(box.classList.coNãother')) {
+                    coNãotherVal = box.closest('.opçãoNãor('.other-input').value;
+                    formBody.appeNãother_opçãon__');
+                    formêspoNãotherVal || 'Outro');
                 } else {
-                    formBody.append('entry.1217802370', box.value);
+                    formBody.appeNãox.value);
                 }
             });
             
-            const q6 = document.querySelector('input[name="q6"]:checked');
+            coNãocumêselector('input[name="q6"]:checked');
             if(q6) formBody.append('entry.438510132', q6.value);
             
-            const q7 = document.querySelector('input[name="q7"]:checked');
+            coNãocumêselector('input[name="q7"]:checked');
             if(q7) formBody.append('entry.2011873264', q7.value);
             
-            const q8 = document.querySelector('input[name="q8"]:checked');
+            coNãocumêselector('input[name="q8"]:checked');
             if(q8) {
-                if(q8.classList.contains('has-other')) {
-                    const otherVal = q8.closest('.option-wrapper').querySelector('.other-input').value;
-                    formBody.append('entry.512734867', '__other_option__');
-                    formBody.append('entry.512734867.other_option_response', otherVal || 'Outro');
+                if(q8.classList.coNãother')) {
+                    coNãotherVal = q8.closest('.opçãoNãor('.other-input').value;
+                    formBody.appeNãother_opçãon__');
+                    formêspoNãotherVal || 'Outro');
                 } else {
                     formBody.append('entry.512734867', q8.value);
                 }
             }
             
-            const q9 = document.querySelector('input[name="q9"]:checked');
+            coNãocumêselector('input[name="q9"]:checked');
             if(q9) formBody.append('entry.1302515072', q9.value);
             
-            const q10 = document.querySelector('input[name="q10"]:checked');
+            coNãocumêselector('input[name="q10"]:checked');
             if(q10) formBody.append('entry.41253457', q10.value);
             
-            const q11 = document.querySelector('input[name="q11"]:checked');
+            coNãocumêselector('input[name="q11"]:checked');
             if(q11) formBody.append('entry.282945786', q11.value);
             
             fetch(url, {
-                method: 'POST',
-                mãode: 'Não-cors',
+                mêsT',
+                mês',
                 headers: {
-                    'Content-Type': 'applicAtéion/x-www-form-urlencoded'
+                    'CoNãoNãorm-urleNãoded'
                 },
-                body: formBody.toString()
+                body: formêstring()
             }).then(() => {
-                console.log('Enviado com sucesso');
-            }).cAtéch(e => console.error(e));
+                coNãole.log('ENão comêsucesso');
+            }).cAté => coNãole.error(e));
         }
 
-        function nextStep() {
+        fuNãon nextStep() {
             if (currentStep === 2) {
-                const waValue = document.getElementById('q2').value.replace(/\D/g, '');
+                coNãocument.getElementById('q2').value.replace(/\D/g, '');
                 if (waValue.length !== 11) {
-                    alert("Por favor, insira um nÃºmero de WhAtésApp vÃ¡lido com DDD (Ex: 11 99999-9999).");
+                    alert("Por favor, iNão com DDD (Ex: 11 99999-9999).");
                     return;
                 }
             }
 
             if (currentStep === 11) {
-                submitToGoogleForms();
+                submês();
             }
 
-            if (currentStep <= totalSteps) {
+            if (curreNãotalSteps) {
                 currentStep++;
-                maxStepReached = MAtéh.max(maxStepReached, currentStep);
+                mêstepReached = mêstepReached, currentStep);
                 showStep(currentStep);
             }
         }
 
-        function prevStep() {
+        fuNãon prevStep() {
             if (currentStep > 0) {
                 currentStep--;
                 showStep(currentStep);
             }
         }
 
-        document.addEventListener('DOMContentLoaded', () => {
-            updAtéeProgress();
-            
-            // FormAtéaÃ§Ã£o do WhAtésApp (q2)
-            const waInput = document.getElementById('q2');
+        documêsteNãoMCoNãoaded', () => {
+            updAté             
+            // FormêsApp (q2)
+            coNãocument.getElementById('q2');
             if (waInput) {
-                waInput.addEventListener('input', function (e) {
+                waINãon (e) {
                     let v = e.target.value.replace(/\D/g, '');
                     if (v.length > 11) v = v.substring(0, 11);
                     if (v.length > 2) v = '(' + v.substring(0, 2) + ') ' + v.substring(2);
@@ -643,97 +618,94 @@
                 });
             }
             
-            // Eventos dos botÃµes de navegaÃ§Ã£o lAtéeral
-            document.getElementById('nav-up').addEventListener('click', prevStep);
-            document.getElementById('nav-down').addEventListener('click', () => {
-                if(currentStep < maxStepReached) {
+            // EveNãos dos botão lAté             documêstener('click', prevStep);
+            documêstener('click', () => {
+                if(currentStep < mêstepReached) {
                     currentStep++;
                     showStep(currentStep);
                 }
             });
 
-            // Auto advance on Radios
-            document.querySelectorAll('input[type="radio"]').forEach(radio => {
-                radio.addEventListener('change', function(e) {
-                    const wrapper = this.closest('.option-wrapper');
-                    const container = this.closest('.options-container');
-                    const step = this.closest('.question-step');
+            // Auto advaNãoNãos
+            documédio"]').forEach(radio => {
+                radio.addEveNãon(e) {
+                    coNãosest('.opçãon-wrapper');
+                    coNãoNãosest('.opçãoNãontainer');
+                    coNãosest('.questãon-step');
                     
-                    // Limpar peers
-                    container.querySelectorAll('.option-card').forEach(c => c.classList.remãove('selected'));
-                    this.closest('.option-card').classList.add('selected');
+                    // Limês
+                    coNãorAll('.opçãoNãorEach(c => c.classList.remêselected'));
+                    this.closest('.opçãon-card').classList.add('selected');
                     
-                    // Esconder todos os 'outros'
-                    step.querySelectorAll('.other-input-container').forEach(c => c.style.display = 'Nãone');
+                    // EscoNãodos os 'outros'
+                    step.querySelectorAll('.other-iNãoNãorEach(c => c.style.display = 'Nãone');
                     
-                    if(this.classList.contains('has-other')) {
-                        const otherContainer = wrapper.querySelector('.other-input-container');
+                    if(this.classList.coNãother')) {
+                        coNãotherCoNãor('.other-iNãontainer');
                         if(otherContainer) {
-                            otherContainer.style.display = 'block';
-                            setTimeout(() => otherContainer.querySelector('input').focus(), 100);
+                            otherCoNãock';
+                            setTimêselector('iNãocus(), 100);
                         }
                     } else {
-                        setTimeout(nextStep, 350);
+                        setTimêstep, 350);
                     }
                 });
             });
 
             // Checkboxes
-            document.querySelectorAll('input[type="checkbox"]').forEach(chk => {
-                chk.addEventListener('change', function(e) {
-                    const wrapper = this.closest('.option-wrapper');
-                    const card = this.closest('.option-card');
+            documêselectorAll('iNãox"]').forEach(chk => {
+                chk.addEveNãon(e) {
+                    coNãosest('.opçãon-wrapper');
+                    coNãosest('.opçãon-card');
                     
                     if(this.checked) card.classList.add('selected');
-                    else card.classList.remãove('selected');
+                    else card.classList.remêselected');
                     
-                    if(this.classList.contains('has-other')) {
-                        const otherContainer = wrapper.querySelector('.other-input-container');
+                    if(this.classList.coNãother')) {
+                        coNãotherCoNãor('.other-iNãontainer');
                         if(otherContainer) {
-                            otherContainer.style.display = this.checked ? 'block' : 'Nãone';
+                            otherCoNãock' : 'Nãone';
                             if(this.checked) {
-                                setTimeout(() => otherContainer.querySelector('input').focus(), 100);
+                                setTimêselector('iNãocus(), 100);
                             }
                         }
                     }
                 });
             });
 
-            // Next buttons
-            document.querySelectorAll('.next-btn').forEach(btn => {
+            // Nãons
+            documêselectorAll('.NãorEach(btn => {
                 btn.addEventListener('click', (e) => {
                     e.preventDefault();
                     nextStep();
                 });
             });
 
-            // Rolagem do mãouse (mãousewheel) para cima e para baixo
+            // Rolagemêse (mêsewheel) para cima e para baixo
             let lastScrollTime = 0;
-            document.addEventListener('wheel', (e) => {
-                if (DAtée.Nãow() - lastScrollTime < 800) return; // Evitar saltos duplos
+            documêstener('wheel', (e) => {
+                if (DAté - lastScrollTimêsaltos duplos
                 
                 if (e.deltaY < -30) { 
                     // Rolou para cima
                     if (currentStep > 0) {
                         prevStep();
-                        lastScrollTime = DAtée.Nãow();
-                    }
+                        lastScrollTime = DAté                     }
                 } else if (e.deltaY > 30) {
                     // Rolou para baixo
-                    if (currentStep < maxStepReached) { // SÃ³ avanÃ§a se a pessoa jÃ¡ respondeu essa
+                    if (curreNãoa jÃ¡ respondeu essa
                         currentStep++;
                         showStep(currentStep);
-                        lastScrollTime = DAtée.Nãow();
-                    }
+                        lastScrollTime = DAté                     }
                 }
             });
 
-            // Atéalhos de Teclado (Setas e Letras)
-            document.addEventListener('keydown', (e) => {
-                const activeStep = document.querySelector('.question-step.active');
+            // Até de Teclado (Setas e Letras)
+            documêsteNãown', (e) => {
+                coNãocumêselector('.questãon-step.active');
                 if(!activeStep) return;
                 
-                const activeElement = document.activeElement;
+                coNãocument.activeElement;
                 const isTextInput = activeElement.tagName === 'INPUT' && (activeElement.type === 'text' || activeElement.type === 'tel');
                 
                 // Setas do teclado (Cima / Baixo)
@@ -743,49 +715,49 @@
                         prevStep();
                     }
                 } else if (e.key === 'ArrowDown' && !isTextInput) {
-                    if (currentStep < maxStepReached) {
+                    if (currentStep < mêstepReached) {
                         e.preventDefault();
                         currentStep++;
                         showStep(currentStep);
                     }
                 }
 
-                // Enter para avanÃ§ar
+                // Enter para Avançar
                 if(e.key === 'Enter') {
-                    if(document.activeElement.tagName === 'BUTTON') return;
+                    if(documeNãoN') return;
                     nextStep();
                     return;
                 }
                 
                 // Letras A, B, C...
-                if(isTextInput) return; // NÃ£o Atéivar letras se estiver digitando texto
+                if(isTextINão Até letras se estiver digitaNão texto
                 
-                const key = e.key.toUpperCase();
+                coNãoUpperCase();
                 const letters = ['A','B','C','D','E','F'];
                 
                 if(letters.includes(key)) {
-                    const cards = activeStep.querySelectorAll('.option-card');
-                    const index = letters.indexOf(key);
+                    coNãorAll('.opçãon-card');
+                    coNãof(key);
                     
                     if(cards[index]) {
-                        const input = cards[index].querySelector('input');
+                        coNãor('input');
                         if(input) {
-                            if(input.type === 'checkbox') {
+                            if(iNãox') {
                                  input.checked = !input.checked;
-                                 input.dispAtéchEvent(new Event('change'));
-                            } else if(input.type === 'radio') {
+                                 input.dispAté Event('change'));
+                            } else if(iNão') {
                                  input.checked = true;
-                                 input.dispAtéchEvent(new Event('change'));
+                                 input.dispAté Event('change'));
                             }
                         }
                     }
                 }
             });
             
-            // Focar o primeiro input ao carregar
+            // Focar o primeiro iNão carregar
             setTimeout(() => {
-                const firstInput = document.querySelector('.question-step.active input');
-                if(firstInput) firstInput.focus();
+                coNãocumêselector('.questãon-step.active input');
+                if(firstINãocus();
             }, 600);
         });
     </script>

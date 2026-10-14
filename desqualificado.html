@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Agradecemos seu contato - Le Dominus</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- ATENÇÃO: NENHUM PIXEL INSTALADO NESTA PÁGINA PARA NÃO OTIMIZAR O META ADS -->
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: #ffffff;
+            color: #111111;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 40px 24px;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 620px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            animation: fadeIn 0.6s ease forwards;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .icon-circle {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 76px;
+            height: 76px;
+            border-radius: 50%;
+            background: #f4f4f5;
+            color: #111111;
+            margin-bottom: 24px;
+            border: 1px solid rgba(0, 0, 0, 0.08);
+        }
+
+        h1 {
+            font-size: 28px;
+            font-weight: 700;
+            color: #111111;
+            line-height: 1.3;
+            margin-bottom: 16px;
+        }
+
+        p {
+            color: rgba(0, 0, 0, 0.65);
+            font-size: 17px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .info-box {
+            background-color: #fafafa;
+            border: 1px solid rgba(0, 0, 0, 0.08);
+            border-radius: 8px;
+            padding: 20px;
+            margin-top: 10px;
+            margin-bottom: 28px;
+            text-align: left;
+        }
+
+        .info-box p {
+            margin-bottom: 0;
+            font-size: 15px;
+            color: rgba(0, 0, 0, 0.7);
+        }
+
+        .btn-home {
+            background-color: #111111;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 14px 32px;
+            font-size: 16px;
+            font-weight: 500;
+            border-radius: 6px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.2s ease;
+        }
+
+        .btn-home:hover {
+            background-color: #333333;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 24px 20px;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+
+            p {
+                font-size: 15px;
+            }
+
+            .icon-circle {
+                width: 64px;
+                height: 64px;
+                margin-bottom: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="icon-circle">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+                <line x1="16" y1="13" x2="8" y2="13"></line>
+                <line x1="16" y1="17" x2="8" y2="17"></line>
+                <polyline points="10 9 9 9 8 9"></polyline>
+            </svg>
+        </div>
+
+        <h1>Obrigado por responder!</h1>
+        <p>Recebemos as informações da sua empresa com sucesso em nosso sistema.</p>
+
+        <div class="info-box">
+            <p><strong>Critério do Programa:</strong> No momento, a nossa assessoria com período de teste gratuito é dedicada exclusivamente a empresas de reformas e pintura que já possuem faturamento estruturado a partir de <strong>R$ 20 mil/mês</strong>.</p>
+        </div>
+
+        <p style="font-size: 15px;">Já salvamos o seu contato com prioridade. Assim que abrirmos uma nova turma ou soluções voltadas para empresas na fase inicial de expansão, entraremos em contato!</p>
+
+        <a href="https://www.ledominus.com.br" class="btn-home">
+            Conhecer a Le Dominus
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+        </a>
+    </div>
+</body>
+</html>

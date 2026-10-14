@@ -618,6 +618,18 @@
 
             if (currentStep === 11) {
                 submitLead();
+
+                // Verifica se o lead escolheu a Opção A da Pergunta 3 (Faturamento < 20k)
+                const q3 = document.querySelector('input[name="q3"]:checked');
+                const isUnder20k = q3 && (q3.value === 'Até R$ 20 mil/mês' || q3.value.indexOf('20 mil') !== -1 || q3.value.indexOf('10 mil') !== -1);
+
+                if (isUnder20k) {
+                    // Redireciona para a página sem disparar o pixel de conversão
+                    setTimeout(() => {
+                        window.location.href = 'desqualificado.html';
+                    }, 350);
+                    return;
+                }
             }
 
             if (currentStep <= totalSteps) {
